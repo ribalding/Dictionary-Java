@@ -36,4 +36,15 @@ public class AppTest extends FluentTest {
     click("a", withText("cat"));
     assertThat(pageSource()).contains("cat");
   }
+
+  @Test
+  public void definitionsGetOutputtedCorrectly() {
+    goTo("http://localhost:4567");
+    fill("#wordInput").with("cat");
+    submit(".btn");
+    click("a", withText ("cat"));
+    fill("#inputDef").with("a furry feline");
+    submit(".btn");
+    assertThat(pageSource()).contains("a furry feline");
+  }
 }

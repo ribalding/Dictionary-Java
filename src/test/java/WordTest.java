@@ -1,7 +1,11 @@
 import org.junit.*;
 import static org.junit.Assert.*;
+import org.junit.Rule;
 
 public class WordTest{
+
+  @Rule
+  public ClearRule clearRule = new ClearRule();
 
   @Test
   public void word_instantiatesCorrectly(){
@@ -16,10 +20,9 @@ public class WordTest{
   }
 
   @Test
-  public void addDefinition_addsCorrectly(){
-    Word newWord = new Word("Derp");
-    Definition newDefinition = new Definition("Herp");
-    newWord.addDefinition(newDefinition);
-    assertEquals("Herp", newWord.getDefinition());
+  public void getID_returnsCorrectID(){
+    Word newWord = new Word("Hotline");
+    Integer count = 1;
+    assertEquals(count, newWord.getID());
   }
 }

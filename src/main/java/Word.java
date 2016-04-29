@@ -4,6 +4,7 @@ public class Word{
   private String mWord;
   private String mDefinition;
   private static ArrayList<Word> words = new ArrayList<Word>();
+  private static ArrayList<Definition> definitions = new ArrayList<Definition>();
   private Integer mID;
 
   public Word(String input) {
@@ -17,11 +18,11 @@ public class Word{
   }
 
   public void addDefinition(Definition newDef){
-    mDefinition = newDef.getDef();
+    definitions.add(newDef);
   }
 
-  public String getDefinition(){
-    return mDefinition;
+  public ArrayList<Definition> getDefinitions(){
+    return definitions;
   }
 
   public Integer getID(){
