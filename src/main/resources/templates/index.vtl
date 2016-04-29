@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-6">
+    <form action="/success" method="post">
+      <div class="form-group">
+        <label for="wordInput">Enter A New Word:</label>
+        <input type="text" name="wordInput" id="wordInput" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-success">Add To Dictionary</button>
+    </form>
+  </div>
+  <div class="col-sm-6">
+    <h3>Your Dictionary</h3>
+    #foreach($word in $wordArray)
+      <h4><a href="word/$word.getID()">$word.getWord()</a></h4>
+    #end
+  </h3>
+</div>

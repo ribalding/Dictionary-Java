@@ -1,0 +1,23 @@
+<h1>$word.getWord()</h1>
+
+<div class="row">
+  <div class="col-sm-4">
+
+    #if($word.getDefinition())
+
+    <h2>$word.getDefinition()</h2>
+
+    #else
+
+    <form action="/addDef/$word.getID()" method="post">
+      <div class="form-group">
+        <label for="inputDef">Add A Definition</label>
+        <input type="text" name="inputDef" id="inputDef" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-success">Add</button>
+    </form>
+
+    #end
+
+  </div>
+</div>
