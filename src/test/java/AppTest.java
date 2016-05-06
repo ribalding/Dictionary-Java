@@ -29,15 +29,6 @@ public class AppTest extends FluentTest {
   }
 
   @Test
-  public void routeToWordPageIsWorkingCorrectly() {
-    goTo("http://localhost:4567");
-    fill("#wordInput").with("cat");
-    submit(".btn");
-    click("a", withText("cat"));
-    assertThat(pageSource()).contains("cat");
-  }
-
-  @Test
   public void definitionsGetOutputtedCorrectly() {
     goTo("http://localhost:4567");
     fill("#wordInput").with("cat");

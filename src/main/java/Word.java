@@ -4,7 +4,7 @@ public class Word{
   private String mWord;
   private String mDefinition;
   private static ArrayList<Word> words = new ArrayList<Word>();
-  private static ArrayList<Definition> definitions = new ArrayList<Definition>();
+  private ArrayList<Definition> definitions = new ArrayList<Definition>();
   private Integer mID;
 
   public Word(String input) {
